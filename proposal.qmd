@@ -1,0 +1,63 @@
+---
+format: 
+  html:
+    theme: flatly
+    number-sections: true
+
+title: "Project Proposal"
+execute: 
+  eval: true
+  echo: true
+  message: false
+  freeze: true
+---
+
+# Introduction
+
+# Problem Statement
+
+# Objectives
+
+# What Has Been Done Before
+
+# Proposed Approach
+
+::: panel-tabset
+## Data preparation and wrangling
+
+## Shiny Application Modules
+
+| **Library** | **Primary Functions** | **Use in This Project** |
+|----|----|----|
+| `janitor` | Data cleaning utilities, especially for column names | Used `clean_names()` to standardize column names for easier downstream manipulation |
+| `tidyverse` | Data wrangling (`dplyr`, `tidyr`), plotting (`ggplot2`), manipulation | Filtering artists, cleaning datasets, joining tables, plotting timelines and charts |
+| `jsonlite` | Reading and parsing JSON files | Likely used to import the JSON-based knowledge graph dataset |
+| `visNetwork` | Interactive graph/network visualizations | Used for building interactive knowledge graphs of artists and genres |
+| `tidygraph` | Graph manipulation in tidy format | Constructing tidy node-edge relationship data for network analysis |
+:::
+
+# Prototype and Storyboards
+
+![](images/dashboard%20prototype.png)
+
+## Genre Influence Dashboard – Overview
+
+The **Genre Influence Dashboard** is an interactive visual analytics tool designed using Shiny app to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.
+
+**Key Components:**
+
+1.  **Influence Over Time**\
+    A timeline graph showing how the artists influence evolved from 2010 to 2040.
+
+2.  **Collaboration and Influence Network**\
+    A network diagram mapping key collaborations both as an individual artist and as part of musical group highlighting the flow of influence across genres like Indie Pop and Indie Folk.
+
+3.  **Heat map of Notable Songs by Genre and Decade**\
+    Adapted directly from the dataset, this heatmap reveals how notable songs have emerged across genres over time. It emphasizes the peak of Dream Pop in the 2020s and the steady growth of Oceanus Folk’s presence in recent decades.
+
+4.  **Career Trajectory of Artists**\
+    A comparative line plot tracking the popularity of Sailor Shift and two peer artists, providing insight into what defines a "rising star" and informing future genre trend predictions.
+
+# Timeline
+
+# Deployment Plan

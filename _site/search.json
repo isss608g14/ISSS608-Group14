@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ISSS608-Group14",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Proj_proposal/Proj_proposal.html#data-preparation-and-wrangling",
+    "href": "Proj_proposal/Proj_proposal.html#data-preparation-and-wrangling",
+    "title": "Project Proposal",
+    "section": "5.1 Data preparation and wrangling",
+    "text": "5.1 Data preparation and wrangling"
+  },
+  {
+    "objectID": "Proj_proposal/Proj_proposal.html#shiny-application-modules",
+    "href": "Proj_proposal/Proj_proposal.html#shiny-application-modules",
+    "title": "Project Proposal",
+    "section": "5.2 Shiny Application Modules",
+    "text": "5.2 Shiny Application Modules"
+  },
+  {
+    "objectID": "proposal.html#data-preparation-and-wrangling",
+    "href": "proposal.html#data-preparation-and-wrangling",
+    "title": "Project Proposal",
+    "section": "5.1 Data preparation and wrangling",
+    "text": "5.1 Data preparation and wrangling"
+  },
+  {
+    "objectID": "proposal.html#shiny-application-modules",
+    "href": "proposal.html#shiny-application-modules",
+    "title": "Project Proposal",
+    "section": "5.2 Shiny Application Modules",
+    "text": "5.2 Shiny Application Modules"
+  },
+  {
+    "objectID": "Proj_proposal/proposal.html#data-preparation-and-wrangling",
+    "href": "Proj_proposal/proposal.html#data-preparation-and-wrangling",
+    "title": "Project Proposal",
+    "section": "5.1 Data preparation and wrangling",
+    "text": "5.1 Data preparation and wrangling"
+  },
+  {
+    "objectID": "Proj_proposal/proposal.html#shiny-application-modules",
+    "href": "Proj_proposal/proposal.html#shiny-application-modules",
+    "title": "Project Proposal",
+    "section": "5.2 Shiny Application Modules",
+    "text": "5.2 Shiny Application Modules"
+  },
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Project Proposal",
+    "section": "",
+    "text": "1 Introduction\n\n\n2 Problem Statement\n\n\n3 Objectives\n\n\n4 What Has Been Done Before\n\n\n5 Proposed Approach\n\nData preparation and wranglingShiny Application Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\nLibrary\nPrimary Functions\nUse in This Project\n\n\n\n\njanitor\nData cleaning utilities, especially for column names\nUsed clean_names() to standardize column names for easier downstream manipulation\n\n\ntidyverse\nData wrangling (dplyr, tidyr), plotting (ggplot2), manipulation\nFiltering artists, cleaning datasets, joining tables, plotting timelines and charts\n\n\njsonlite\nReading and parsing JSON files\nLikely used to import the JSON-based knowledge graph dataset\n\n\nvisNetwork\nInteractive graph/network visualizations\nUsed for building interactive knowledge graphs of artists and genres\n\n\ntidygraph\nGraph manipulation in tidy format\nConstructing tidy node-edge relationship data for network analysis\n\n\n\n\n\n\n\n\n6 Prototype and Storyboards\n\n\n6.0.1 Genre Influence Dashboard – Overview\nThe Genre Influence Dashboard is an interactive visual analytics tool designed to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.\nKey Components:\n\nInfluence Over Time\nA timeline graph showing how Sailor Shift’s influence evolved from 2010 to 2040, illustrating her progression from local artist to global icon.\nCollaboration and Influence Network\nA network diagram mapping Sailor’s key collaborations—both as an individual artist and as part of Ivy Echoes—highlighting the flow of influence across genres like Indie Pop and Indie Folk.\nHeatmap: Influence of Oceanus Folk\nA genre-by-year heatmap showing how Oceanus Folk has permeated various genres such as Pop, Indie Pop, Country, and Blues over three decades. The saturation indicates intensity of influence.\nCareer Trajectory Chart\nA line chart comparing the popularity growth of Sailor Shift and two other artists, capturing notable rises in prominence and indicating patterns that may predict future stars.\n\n\n\n\n7 Timeline\n\n\n8 Deployment Plan"
+  },
+  {
+    "objectID": "proposal.html#genre-influence-dashboard-overview",
+    "href": "proposal.html#genre-influence-dashboard-overview",
+    "title": "Project Proposal",
+    "section": "6.1 Genre Influence Dashboard – Overview",
+    "text": "6.1 Genre Influence Dashboard – Overview\nThe Genre Influence Dashboard is an interactive visual analytics tool designed using Shiny app to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.\nKey Components:\n\nInfluence Over Time\nA timeline graph showing how the artists influence evolved from 2010 to 2040.\nCollaboration and Influence Network\nA network diagram mapping key collaborations both as an individual artist and as part of musical group highlighting the flow of influence across genres like Indie Pop and Indie Folk.\nHeat map of Notable Songs by Genre and Decade\nAdapted directly from the dataset, this heatmap reveals how notable songs have emerged across genres over time. It emphasizes the peak of Dream Pop in the 2020s and the steady growth of Oceanus Folk’s presence in recent decades.\nCareer Trajectory of Artists\nA comparative line plot tracking the popularity of Sailor Shift and two peer artists, providing insight into what defines a “rising star” and informing future genre trend predictions."
+  }
+]

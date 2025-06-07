@@ -1,0 +1,37 @@
+/* css styles */
+
+.hero-banner {
+  background-image: url("images/webpage-front-cover.gif");
+  background-size: contain;               /* Fit entire image within container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  width: 100%;
+  height: auto;                          /* Allow height to scale */
+  aspect-ratio: 16 / 9;                  /* Maintain image proportions */
+  padding: 0;                            /* Remove excess spacing */
+  box-sizing: border-box;
+}
+
+/* Style for the navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #114B5F; /* White background for the navbar */
+}
+
+/* Override Bootstrap's default font color */
+.navbar .navbar-brand, .navbar .navbar-nav .nav-link {
+    color: #FFFFFF !important; 
+    font-weight: bold;
+}

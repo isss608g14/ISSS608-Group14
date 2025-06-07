@@ -1,0 +1,10 @@
+---
+format: 
+  html:
+    theme: flatly
+    css: styles.css
+    page-layout: custom
+---
+
+::: hero-banner
+:::

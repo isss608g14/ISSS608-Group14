@@ -68,5 +68,26 @@
     "title": "Project Proposal",
     "section": "6.1 Genre Influence Dashboard – Overview",
     "text": "6.1 Genre Influence Dashboard – Overview\nThe Genre Influence Dashboard is an interactive visual analytics tool designed using Shiny app to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.\nKey Components:\n\nInfluence Over Time\nA timeline graph showing how the artists influence evolved from 2010 to 2040.\nCollaboration and Influence Network\nA network diagram mapping key collaborations both as an individual artist and as part of musical group highlighting the flow of influence across genres like Indie Pop and Indie Folk.\nHeat map of Notable Songs by Genre and Decade\nAdapted directly from the dataset, this heatmap reveals how notable songs have emerged across genres over time. It emphasizes the peak of Dream Pop in the 2020s and the steady growth of Oceanus Folk’s presence in recent decades.\nCareer Trajectory of Artists\nA comparative line plot tracking the popularity of Sailor Shift and two peer artists, providing insight into what defines a “rising star” and informing future genre trend predictions."
+  },
+  {
+    "objectID": "proposal.html#music-collaboration-and-network-analysis.",
+    "href": "proposal.html#music-collaboration-and-network-analysis.",
+    "title": "Project Proposal",
+    "section": "4.1 Music Collaboration and Network Analysis.",
+    "text": "4.1 Music Collaboration and Network Analysis.\nMany studies have developed graphs to understand how partnerships influence genre evolution, commercial success, and innovation. Bertin‐Mahieux et al. (2011) built a large‐scale collaboration network in their study from Million Song Dataset metadata, showing that centrality measures correlate with streaming popularity. Similarly, Cronin et al. (2019) used bipartite artist‐song networks to detect emergent genre clusters"
+  },
+  {
+    "objectID": "proposal.html#knowledge-graphs-in-the-music-domain.",
+    "href": "proposal.html#knowledge-graphs-in-the-music-domain.",
+    "title": "Project Proposal",
+    "section": "4.2 Knowledge Graphs in the Music Domain.",
+    "text": "4.2 Knowledge Graphs in the Music Domain.\nSeveral efforts have created “music knowledge graphs” that integrate heterogeneous entities—songs, artists, labels, genres, albums—into a single directed/attributed graph. DBpedia’s music ontology and MusicBrainz’s relational schema are widely used to power recommendation systems and semantic queries. Elasticsearch‐backed knowledge graphs (e.g., Pichl et al., 2017) combine text attributes (lyrics, reviews) with structural relations to improve music recommendation."
+  },
+  {
+    "objectID": "proposal.html#nodeembedding-and-linkprediction-approaches.",
+    "href": "proposal.html#nodeembedding-and-linkprediction-approaches.",
+    "title": "Project Proposal",
+    "section": "4.3 Node‐Embedding and Link‐Prediction Approaches.",
+    "text": "4.3 Node‐Embedding and Link‐Prediction Approaches.\nNode2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have been applied to music‐industry graphs for tasks like predicting future collaborations (e.g., “Will artist A collaborate with artist B?”) or forecasting label signings. These embedding methods can capture structural equivalences—e.g., two indie‐folk artists who both consistently work on “collaborative splits.”"
   }
 ]

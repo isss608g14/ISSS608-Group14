@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -122,7 +122,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
   <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement"><span class="header-section-number">2</span> Problem Statement</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">3</span> Objectives</a></li>
-  <li><a href="#what-has-been-done-before" id="toc-what-has-been-done-before" class="nav-link" data-scroll-target="#what-has-been-done-before"><span class="header-section-number">4</span> What Has Been Done Before</a></li>
+  <li><a href="#what-has-been-done-before" id="toc-what-has-been-done-before" class="nav-link" data-scroll-target="#what-has-been-done-before"><span class="header-section-number">4</span> What Has Been Done Before</a>
+  <ul class="collapse">
+  <li><a href="#music-collaboration-and-network-analysis." id="toc-music-collaboration-and-network-analysis." class="nav-link" data-scroll-target="#music-collaboration-and-network-analysis."><span class="header-section-number">4.1</span> Music Collaboration and Network Analysis.</a></li>
+  <li><a href="#knowledge-graphs-in-the-music-domain." id="toc-knowledge-graphs-in-the-music-domain." class="nav-link" data-scroll-target="#knowledge-graphs-in-the-music-domain."><span class="header-section-number">4.2</span> Knowledge Graphs in the Music Domain.</a></li>
+  <li><a href="#nodeembedding-and-linkprediction-approaches." id="toc-nodeembedding-and-linkprediction-approaches." class="nav-link" data-scroll-target="#nodeembedding-and-linkprediction-approaches."><span class="header-section-number">4.3</span> Node‐Embedding and Link‐Prediction Approaches.</a></li>
+  </ul></li>
   <li><a href="#proposed-approach" id="toc-proposed-approach" class="nav-link" data-scroll-target="#proposed-approach"><span class="header-section-number">5</span> Proposed Approach</a></li>
   <li><a href="#prototype-and-storyboards" id="toc-prototype-and-storyboards" class="nav-link" data-scroll-target="#prototype-and-storyboards"><span class="header-section-number">6</span> Prototype and Storyboards</a>
   <ul class="collapse">
@@ -166,6 +171,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-has-been-done-before" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> What Has Been Done Before</h1>
+<section id="music-collaboration-and-network-analysis." class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="music-collaboration-and-network-analysis."><span class="header-section-number">4.1</span> Music Collaboration and Network Analysis.</h2>
+<p>Many studies have developed graphs to understand how partnerships influence genre evolution, commercial success, and innovation. Bertin‐Mahieux et al.&nbsp;(2011) built a large‐scale collaboration network in their study from Million Song Dataset metadata, showing that centrality measures correlate with streaming popularity. Similarly, Cronin et al.&nbsp;(2019) used bipartite artist‐song networks to detect emergent genre clusters</p>
+</section>
+<section id="knowledge-graphs-in-the-music-domain." class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="knowledge-graphs-in-the-music-domain."><span class="header-section-number">4.2</span> Knowledge Graphs in the Music Domain.</h2>
+<p>Several efforts have created “music knowledge graphs” that integrate heterogeneous entities—songs, artists, labels, genres, albums—into a single directed/attributed graph. DBpedia’s music ontology and MusicBrainz’s relational schema are widely used to power recommendation systems and semantic queries. Elasticsearch‐backed knowledge graphs (e.g., Pichl et al., 2017) combine text attributes (lyrics, reviews) with structural relations to improve music recommendation.</p>
+</section>
+<section id="nodeembedding-and-linkprediction-approaches." class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="nodeembedding-and-linkprediction-approaches."><span class="header-section-number">4.3</span> Node‐Embedding and Link‐Prediction Approaches.</h2>
+<p>Node2Vec (Grover &amp; Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have been applied to music‐industry graphs for tasks like predicting future collaborations (e.g., “Will artist A collaborate with artist B?”) or forecasting label signings. These embedding methods can capture structural equivalences—e.g., two indie‐folk artists who both consistently work on “collaborative splits.”</p>
+</section>
 </section>
 <section id="proposed-approach" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Proposed Approach</h1>
@@ -173,7 +190,122 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Data preparation and wrangling</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Shiny Application Modules</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.1 Parse JSON into Graph</td>
+<td>Loading &amp; Cleaning</td>
+<td>Load the MC1_graph.json file into a NetworkX or igraph multigraph object.</td>
+</tr>
+<tr class="even">
+<td>1.2 Convert Dates</td>
+<td>Loading &amp; Cleaning</td>
+<td>Convert ‘release_date’ and ‘written_date’ to datetime; fill in missing month/day as Jan 1.</td>
+</tr>
+<tr class="odd">
+<td>1.3 Normalize Genres</td>
+<td>Loading &amp; Cleaning</td>
+<td>Trim whitespace, standardize capitalization in genre field (e.g., ‘indie folk’ → ‘Indie Folk’).</td>
+</tr>
+<tr class="even">
+<td>1.4 Fill Missing Data</td>
+<td>Loading &amp; Cleaning</td>
+<td>Handle NA/missing values for critical fields like genre, dates, names.</td>
+</tr>
+<tr class="odd">
+<td>1.5 Check Duplicate Persons</td>
+<td>Loading &amp; Cleaning</td>
+<td>Detect and reconcile duplicate Persons based on name and linked songs overlap.</td>
+</tr>
+<tr class="even">
+<td>2.1 Build Song Table</td>
+<td>Flat Table Building</td>
+<td>Extract: song_id, name, genre, release_year, written_year, label_ids, writer_ids, performer_ids, notable flag.</td>
+</tr>
+<tr class="odd">
+<td>2.2 Build Person Table</td>
+<td>Flat Table Building</td>
+<td>Extract: person_id, name, stage_name; compute primary_genre later.</td>
+</tr>
+<tr class="even">
+<td>2.3 Build Label Table</td>
+<td>Flat Table Building</td>
+<td>Extract: label_id, name; count unique Persons signed under or released by this label.</td>
+</tr>
+<tr class="odd">
+<td>2.4 Build Album Table</td>
+<td>Flat Table Building</td>
+<td>Extract: album_id, name, release_year, genre, notable.</td>
+</tr>
+<tr class="even">
+<td>2.5 Build Edge-List Table</td>
+<td>Flat Table Building</td>
+<td>Extract source_id, target_id, edge_type from graph into long format.</td>
+</tr>
+<tr class="odd">
+<td>3.1 Degree Centrality</td>
+<td>Feature Engineering - Structural</td>
+<td>Compute in-degree and out-degree for each node using graph structure.</td>
+</tr>
+<tr class="even">
+<td>3.2 Betweenness Centrality</td>
+<td>Feature Engineering - Structural</td>
+<td>Compute betweenness centrality for Person and Label nodes.</td>
+</tr>
+<tr class="odd">
+<td>3.3 Genre One-Hot Encoding</td>
+<td>Feature Engineering - Semantic</td>
+<td>One-hot encode song genres. For Persons, use genres from linked songs.</td>
+</tr>
+<tr class="even">
+<td>3.4 Compute Primary Genre</td>
+<td>Feature Engineering - Semantic</td>
+<td>For each Person, set primary genre as the most common among songs they wrote/performed.</td>
+</tr>
+<tr class="odd">
+<td>3.5 Compute Years Since Release</td>
+<td>Feature Engineering - Semantic</td>
+<td>Compute <code>years_since_release</code> = 2025 - release_year.</td>
+</tr>
+<tr class="even">
+<td>3.6 Compute Career Span</td>
+<td>Feature Engineering - Semantic</td>
+<td>Compute <code>career_span</code> = last_song_year - first_song_year.</td>
+</tr>
+<tr class="odd">
+<td>3.7 Label Affiliation (Person)</td>
+<td>Feature Engineering - Semantic</td>
+<td>Count distinct Labels per Person (via ‘signed_under_label’ or ‘released_by’).</td>
+</tr>
+<tr class="even">
+<td>3.8 Label Genre Coverage</td>
+<td>Feature Engineering - Semantic</td>
+<td>Count how many different genres each Label covers (from linked songs).</td>
+</tr>
+<tr class="odd">
+<td>3.9 Common-Neighbor Count</td>
+<td>Feature Engineering - Edge-Based</td>
+<td>For every pair of Persons, count co-written or co-performed songs.</td>
+</tr>
+<tr class="even">
+<td>3.10 Preferential Attachment</td>
+<td>Feature Engineering - Edge-Based</td>
+<td>Compute Score(p₁,p₂) = degree(p₁) × degree(p₂) for all person pairs.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <table class="caption-top table">
@@ -332,8 +464,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -444,7 +574,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

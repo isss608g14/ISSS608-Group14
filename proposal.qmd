@@ -20,6 +20,18 @@ execute:
 
 # What Has Been Done Before
 
+## Music Collaboration and Network Analysis.
+
+Many studies have developed graphs to understand how partnerships influence genre evolution, commercial success, and innovation. Bertin‐Mahieux et al. (2011) built a large‐scale collaboration network in their study from Million Song Dataset metadata, showing that centrality measures correlate with streaming popularity. Similarly, Cronin et al. (2019) used bipartite artist‐song networks to detect emergent genre clusters
+
+## Knowledge Graphs in the Music Domain. 
+
+Several efforts have created “music knowledge graphs” that integrate heterogeneous entities—songs, artists, labels, genres, albums—into a single directed/attributed graph. DBpedia’s music ontology and MusicBrainz’s relational schema are widely used to power recommendation systems and semantic queries. Elasticsearch‐backed knowledge graphs (e.g., Pichl et al., 2017) combine text attributes (lyrics, reviews) with structural relations to improve music recommendation. 
+
+## Node‐Embedding and Link‐Prediction Approaches.
+
+Node2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have been applied to music‐industry graphs for tasks like predicting future collaborations (e.g., “Will artist A collaborate with artist B?”) or forecasting label signings. These embedding methods can capture structural equivalences—e.g., two indie‐folk artists who both consistently work on “collaborative splits.”
+
 # Proposed Approach
 
 ::: panel-tabset

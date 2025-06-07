@@ -37,6 +37,45 @@ Node2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have be
 ::: panel-tabset
 ## Data preparation and wrangling
 
+We start with a single JSON file, MC1_graph.json, which describes a directed multigraph. Its nodes represent four types of entities—Songs, Persons, RecordLabels, and Albums. Because it is a multigraph, the same two nodes can be connected by multiple edges (for example, one edge saying a Person “wrote” a Song and another saying they “performed” it). Each edge is also labeled—“written_by,” “released_by,” “featured_on_album,” “signed_under_label,” etc.
+
+1. Loading and Cleaning
+•	Parse the JSON into a NetworkX or igraph graph.
+•	Convert release_date and written_date strings into real Python dates (treat “YYYY” as January 1 of that year).
+•	Normalize genres by trimming whitespace and standardize capitalization (e.g., “indie folk” → “Indie Folk”).
+•	Fill missing data.
+•	Check for duplicate Persons: If two Person nodes share the same name, compare their linked songs to decide if they really are the same person or two different people.
+
+2. Building Flat Tables
+Since we only have one graph, “merging” means extracting several tables for later modeling:
+•	Song Table (one row per song):
+o	song_id, name, genre, release_year, written_year,
+o	Lists of label_ids (from “released_by” edges), writer_ids (from “written_by”), performer_ids (from “performed_by”),
+o	notable (true/false).
+•	Person Table (one row per person):
+o	person_id, name, stage_name (if any),
+o	primary_genre (to be calculated later).
+•	Label Table (one row per label):
+o	label_id, name,
+o	num_signed_artists (count of unique Persons linked to it).
+•	Album Table (one row per album):
+o	album_id, name, release_year, genre, notable.
+•	Edge-List Table: A simple three-column list—(source_id, target_id, edge_type)—that we’ll feed into graph-embedding algorithms.
+
+3. Feature Engineering
+We generate both structural and semantic features:
+•	Structural (graph-based)
+1.	Degree Centrality: For each node, count incoming edges (in-degree) and outgoing edges (out-degree).
+2.	Betweenness Centrality: For Persons and Labels, measure how often they lie on shortest paths, indicating they connect different groups (e.g., linking “Indie Folk” to “Synthwave”).
+•	Semantic
+1.	Genre One-Hot Encoding: Create a binary column for each distinct genre. For Persons, set primary_genre as the most common genre among songs they wrote or performed.
+2.	Temporal: For each Song, compute years_since_release = 2025 – release_year. For each Person, compute career_span = last_song_year – first_song_year.
+3.	Label Affiliation: For each Person, count how many different Labels they’re linked to (by “signed_under_label” or “released_by”). For each Label, count how many distinct genres its songs cover.
+•	Edge-Based (for predicting future collaborations)
+1.	Common-Neighbor Count: For two Persons, count how many songs they both wrote or performed.
+2.	Preferential Attachment: Score(p₁,p₂) = degree(p₁) × degree(p₂). 
+
+
 ## Shiny Application Modules
 
 | **Library** | **Primary Functions** | **Use in This Project** |

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -131,7 +131,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#proposed-approach" id="toc-proposed-approach" class="nav-link" data-scroll-target="#proposed-approach"><span class="header-section-number">5</span> Proposed Approach</a></li>
   <li><a href="#prototype-and-storyboards" id="toc-prototype-and-storyboards" class="nav-link" data-scroll-target="#prototype-and-storyboards"><span class="header-section-number">6</span> Prototype and Storyboards</a>
   <ul class="collapse">
-  <li><a href="#genre-influence-dashboard-overview" id="toc-genre-influence-dashboard-overview" class="nav-link" data-scroll-target="#genre-influence-dashboard-overview"><span class="header-section-number">6.1</span> Genre Influence Dashboard – Overview</a></li>
+  <li><a href="#dataset-summary" id="toc-dataset-summary" class="nav-link" data-scroll-target="#dataset-summary"><span class="header-section-number">6.1</span> 🗂️ Dataset Summary</a></li>
+  <li><a href="#shiny-prototype" id="toc-shiny-prototype" class="nav-link" data-scroll-target="#shiny-prototype"><span class="header-section-number">6.2</span> Shiny Prototype</a></li>
   </ul></li>
   <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline"><span class="header-section-number">7</span> Timeline</a></li>
   <li><a href="#deployment-plan" id="toc-deployment-plan" class="nav-link" data-scroll-target="#deployment-plan"><span class="header-section-number">8</span> Deployment Plan</a></li>
@@ -355,21 +356,80 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="prototype-and-storyboards" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Prototype and Storyboards</h1>
-<p><img src="images/dashboard prototype.png" class="img-fluid"></p>
-<section id="genre-influence-dashboard-overview" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="genre-influence-dashboard-overview"><span class="header-section-number">6.1</span> Genre Influence Dashboard – Overview</h2>
-<p>The <strong>Genre Influence Dashboard</strong> is an interactive visual analytics tool designed using Shiny app to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.</p>
-<p><strong>Key Components:</strong></p>
-<ol type="1">
-<li><p><strong>Influence Over Time</strong><br>
-A timeline graph showing how the artists influence evolved from 2010 to 2040.</p></li>
-<li><p><strong>Collaboration and Influence Network</strong><br>
-A network diagram mapping key collaborations both as an individual artist and as part of musical group highlighting the flow of influence across genres like Indie Pop and Indie Folk.</p></li>
-<li><p><strong>Heat map of Notable Songs by Genre and Decade</strong><br>
-Adapted directly from the dataset, this heatmap reveals how notable songs have emerged across genres over time. It emphasizes the peak of Dream Pop in the 2020s and the steady growth of Oceanus Folk’s presence in recent decades.</p></li>
-<li><p><strong>Career Trajectory of Artists</strong><br>
-A comparative line plot tracking the popularity of Sailor Shift and two peer artists, providing insight into what defines a “rising star” and informing future genre trend predictions.</p></li>
-</ol>
+<p>This interactive Shiny app supports journalist Silas Reed’s investigation into the evolution of Oceanus Folk music, Sailor Shift’s career, and rising star predictions using a large musical knowledge graph.</p>
+<section id="dataset-summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="dataset-summary"><span class="header-section-number">6.1</span> 🗂️ Dataset Summary</h2>
+<ul>
+<li><p><strong>Total Nodes</strong>: 17,412<br>
+<em>(Types: Person, Song, Album, MusicalGroup, RecordLabel)</em></p></li>
+<li><p><strong>Total Edges</strong>: 37,857<br>
+<em>(Types: PerformerOf, InfluencedBy, MemberOf, ComposerOf, ProducerOf, LyricistOf, etc.)</em></p></li>
+<li><p><strong>Format</strong>: Directed Multigraph (via NetworkX node-link JSON)</p></li>
+</ul>
+</section>
+<section id="shiny-prototype" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="shiny-prototype"><span class="header-section-number">6.2</span> Shiny Prototype</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">📁 Tab 1: Sailor Shift’s Career Explorer</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">📁 Tab 2: Oceanus Folk Global Influence</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">📁 Tab 3: Rising Stars Dashboard</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><img src="images/prototype tab1.png" class="img-fluid"></p>
+<p><strong>Goal</strong></p>
+<p>Trace Sailor’s collaborations, direct/indirect influence links, and her influence on the Oceanus Folk community.</p>
+<p><strong>Inputs</strong></p>
+<ul>
+<li><p><strong>Reference Node:</strong> Fixed to “Sailor Shift”</p></li>
+<li><p><strong>Network Depth Selector:</strong> e.g., 1–3 hops from Sailor</p></li>
+<li><p><strong>Relationship Filter:</strong> Choose from “Influenced By”, “Collaborated With”, “Influenced Others”</p></li>
+<li><p><strong>Year Filter:</strong> Based on song/album notoriety year (e.g., 2023–2040)</p></li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul>
+<li><p><strong>Network Graph:</strong> Interactive visNetwork centered on Sailor</p></li>
+<li><p><strong>Temporal Timeline:</strong> Number of notable collaborations or influenced works per year</p></li>
+<li><p><strong>Collaboration Table:</strong> Key artists, genres, or songs Sailor worked with</p></li>
+</ul>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><img src="images/prototype tab2.png" class="img-fluid"></p>
+<p><strong>Goal</strong></p>
+<p>Visualize how Oceanus Folk has spread and evolved, and how other genres influenced it in return.</p>
+<p><strong>Inputs</strong></p>
+<ul>
+<li><p><strong>Reference Genre:</strong> Fixed to “Oceanus Folk”</p></li>
+<li><p><strong>Network Depth Selector:</strong> Show influence up to N hops</p></li>
+<li><p><strong>Influence Direction:</strong> Select “Oceanus Folk → Others” or “Others → Oceanus Folk”</p></li>
+<li><p><strong>Date Filter:</strong> Restrict by release/notoriety date</p></li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul>
+<li><p><strong>Genre Influence Network:</strong> Knowledge graph showing genre-to-genre influence paths</p></li>
+<li><p><strong>Trend Line Graph:</strong> Temporal growth of Oceanus Folk influence (e.g., # of notable influenced songs per year)</p></li>
+<li><p><strong>Genre Inspiration Chart:</strong> Oceanus Folk’s modern inspirations by genre</p></li>
+<li><p><strong>Top Influenced Entities Table:</strong> List of most influenced genres, artists, and songs</p></li>
+</ul>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><img src="images/prototype tab3.png" class="img-fluid"></p>
+<p><strong>Goal</strong></p>
+<p>Define rising star traits and identify emerging Oceanus Folk artists.</p>
+<p><strong>Inputs</strong></p>
+<ul>
+<li><p><strong>Artist Multi-Select (max 3):</strong> e.g., Sailor Shift, Kimberly Snyder, Copper Canyon Ghosts</p></li>
+<li><p><strong>Debut Year Filter:</strong> Filter artists by their entry year (e.g., 2025–2040)</p></li>
+<li><p><strong>Emerging Artist Toggle:</strong> Show only those with fewer than N total works but rising trend</p></li>
+<li><p><strong>Influence Score Slider:</strong> Filter artists with high influence-to-output ratio</p></li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul>
+<li><p><strong>Facet Line Chart:</strong> Notable songs over time by selected artists</p></li>
+<li><p><strong>Radar Chart:</strong> Compare attributes (collaborations, genre spread, influence links)</p></li>
+<li><p><strong>Prediction Box:</strong> 3 predicted Oceanus Folk stars with rationale</p></li>
+<li><p><strong>Career Trait Table:</strong> Metrics such as total notable songs, genres, number of collaborations</p></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="timeline" class="level1" data-number="7">
@@ -464,6 +524,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -574,6 +636,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

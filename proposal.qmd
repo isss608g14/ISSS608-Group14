@@ -38,7 +38,7 @@ Node2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have be
 ## Data preparation and wrangling
 
 | Step | Category | Description |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 1.1 Parse JSON into Graph | Loading & Cleaning | Load the MC1_graph.json file into a NetworkX or igraph multigraph object. |
 | 1.2 Convert Dates | Loading & Cleaning | Convert 'release_date' and 'written_date' to datetime; fill in missing month/day as Jan 1. |
 | 1.3 Normalize Genres | Loading & Cleaning | Trim whitespace, standardize capitalization in genre field (e.g., 'indie folk' → 'Indie Folk'). |
@@ -63,7 +63,7 @@ Node2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have be
 ## Shiny Application Modules
 
 | **Library** | **Primary Functions** | **Use in This Project** |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | `janitor` | Data cleaning utilities, especially for column names | Used `clean_names()` to standardize column names for easier downstream manipulation |
 | `tidyverse` | Data wrangling (`dplyr`, `tidyr`), plotting (`ggplot2`), manipulation | Filtering artists, cleaning datasets, joining tables, plotting timelines and charts |
 | `jsonlite` | Reading and parsing JSON files | Likely used to import the JSON-based knowledge graph dataset |
@@ -73,25 +73,103 @@ Node2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have be
 
 # Prototype and Storyboards
 
-![](images/dashboard%20prototype.png)
+This interactive Shiny app supports journalist Silas Reed’s investigation into the evolution of Oceanus Folk music, Sailor Shift’s career, and rising star predictions using a large musical knowledge graph.
 
-## Genre Influence Dashboard – Overview
+## 🗂️ Dataset Summary
 
-The **Genre Influence Dashboard** is an interactive visual analytics tool designed using Shiny app to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.
+-   **Total Nodes**: 17,412\
+    *(Types: Person, Song, Album, MusicalGroup, RecordLabel)*
 
-**Key Components:**
+-   **Total Edges**: 37,857\
+    *(Types: PerformerOf, InfluencedBy, MemberOf, ComposerOf, ProducerOf, LyricistOf, etc.)*
 
-1.  **Influence Over Time**\
-    A timeline graph showing how the artists influence evolved from 2010 to 2040.
+-   **Format**: Directed Multigraph (via NetworkX node-link JSON)
 
-2.  **Collaboration and Influence Network**\
-    A network diagram mapping key collaborations both as an individual artist and as part of musical group highlighting the flow of influence across genres like Indie Pop and Indie Folk.
+## Shiny Prototype
 
-3.  **Heat map of Notable Songs by Genre and Decade**\
-    Adapted directly from the dataset, this heatmap reveals how notable songs have emerged across genres over time. It emphasizes the peak of Dream Pop in the 2020s and the steady growth of Oceanus Folk’s presence in recent decades.
+::: panel-tabset
+## 📁 Tab 1: Sailor Shift’s Career Explorer
 
-4.  **Career Trajectory of Artists**\
-    A comparative line plot tracking the popularity of Sailor Shift and two peer artists, providing insight into what defines a "rising star" and informing future genre trend predictions.
+![](images/prototype%20tab1.png)
+
+**Goal**
+
+Trace Sailor’s collaborations, direct/indirect influence links, and her influence on the Oceanus Folk community.
+
+**Inputs**
+
+-   **Reference Node:** Fixed to “Sailor Shift”
+
+-   **Network Depth Selector:** e.g., 1–3 hops from Sailor
+
+-   **Relationship Filter:** Choose from “Influenced By”, “Collaborated With”, “Influenced Others”
+
+-   **Year Filter:** Based on song/album notoriety year (e.g., 2023–2040)
+
+**Outputs**
+
+-   **Network Graph:** Interactive visNetwork centered on Sailor
+
+-   **Temporal Timeline:** Number of notable collaborations or influenced works per year
+
+-   **Collaboration Table:** Key artists, genres, or songs Sailor worked with
+
+## 📁 Tab 2: Oceanus Folk Global Influence
+
+![](images/prototype%20tab2.png)
+
+**Goal**
+
+Visualize how Oceanus Folk has spread and evolved, and how other genres influenced it in return.
+
+**Inputs**
+
+-   **Reference Genre:** Fixed to “Oceanus Folk”
+
+-   **Network Depth Selector:** Show influence up to N hops
+
+-   **Influence Direction:** Select “Oceanus Folk → Others” or “Others → Oceanus Folk”
+
+-   **Date Filter:** Restrict by release/notoriety date
+
+**Outputs**
+
+-   **Genre Influence Network:** Knowledge graph showing genre-to-genre influence paths
+
+-   **Trend Line Graph:** Temporal growth of Oceanus Folk influence (e.g., \# of notable influenced songs per year)
+
+-   **Genre Inspiration Chart:** Oceanus Folk’s modern inspirations by genre
+
+-   **Top Influenced Entities Table:** List of most influenced genres, artists, and songs
+
+## 📁 Tab 3: Rising Stars Dashboard
+
+![](images/prototype%20tab3.png)
+
+**Goal**
+
+Define rising star traits and identify emerging Oceanus Folk artists.
+
+**Inputs**
+
+-   **Artist Multi-Select (max 3):** e.g., Sailor Shift, Kimberly Snyder, Copper Canyon Ghosts
+
+-   **Debut Year Filter:** Filter artists by their entry year (e.g., 2025–2040)
+
+-   **Emerging Artist Toggle:** Show only those with fewer than N total works but rising trend
+
+-   **Influence Score Slider:** Filter artists with high influence-to-output ratio
+
+**Outputs**
+
+-   **Facet Line Chart:** Notable songs over time by selected artists
+
+-   **Radar Chart:** Compare attributes (collaborations, genre spread, influence links)
+
+-   **Prediction Box:** 3 predicted Oceanus Folk stars with rationale
+
+-   **Career Trait Table:** Metrics such as total notable songs, genres, number of collaborations
+:::
 
 # Timeline
 

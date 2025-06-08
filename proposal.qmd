@@ -14,9 +14,19 @@ execute:
 
 # Introduction
 
+Oceanus native Sailor Shift has risen to global fame, propelling the previously local genre of Oceanus Folk onto the international stage. As both a solo artist and collaborator, Sailor has maintained a unique ability to blend genres, mentor emerging talent, and sustain a distinct musical identity rooted in her origins. This project aims to explore the evolution of Sailor Shift’s influence, her role in the rise of Oceanus Folk, and how these shifts have shaped broader trends in the global music scene.
+
 # Problem Statement
 
+Despite Sailor Shift’s prominence and Oceanus Folk’s growing global footprint, there is limited structured analysis of how this influence has evolved over time and what implications it may have for future artists or genres. Additionally, while Sailor has consistently supported up-and-coming artists, little work has been done to quantify the impact of her collaborations or trace stylistic inspirations across genres and time.
+
 # Objectives
+
+-   To analyze how Sailor Shift rose to global fame and popularized Oceanus Folk.
+
+-   To map out her influence on emerging artists and genre trends through knowledge graph analysis.
+
+-   To predict which artists might gain traction in the future based on historical influence patterns.
 
 # What Has Been Done Before
 
@@ -173,4 +183,17 @@ Define rising star traits and identify emerging Oceanus Folk artists.
 
 # Timeline
 
+<div>
+
+| Week | Milestone |
+|----------------|--------------------------------------------------------|
+| Week 1 | Data cleaning, JSON conversion, and preliminary exploration using bar and distribution plots; finalize problem framing and objective refinement. |
+| Week 2 | Build and refine network visualizations using `ggraph`, `tidygraph`, and `visNetwork` to analyze Sailor Shift’s influence and genre connections. |
+| Week 3 | Develop animated influence graph over time; extract insights on top artists and genre evolution; begin drafting Quarto write-up and integrate visuals. |
+| Week 4 | Finalize visualizations and narratives; complete and polish Quarto report; conduct peer review and incorporate feedback; work on project poster for final submission. |
+
+</div>
+
 # Deployment Plan
+
+The final output will be presented as a Quarto report hosted on GitHub, embedded with static plots, and network visualizations. An interactive Shiny dashboard will be deployed to allow users to explore influence trends dynamically. All datasets and scripts will be publicly available for reproducibility and review. Finally, a project poster will be created and developed to showcase our findings to peers.

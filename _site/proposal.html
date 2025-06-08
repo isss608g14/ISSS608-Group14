@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./proposal.html" aria-current="page"> 
-<span class="menu-text">Project proposal</span></a>
+<span class="menu-text">Project Proposal</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -163,12 +163,19 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Oceanus native Sailor Shift has risen to global fame, propelling the previously local genre of Oceanus Folk onto the international stage. As both a solo artist and collaborator, Sailor has maintained a unique ability to blend genres, mentor emerging talent, and sustain a distinct musical identity rooted in her origins. This project aims to explore the evolution of Sailor Shift’s influence, her role in the rise of Oceanus Folk, and how these shifts have shaped broader trends in the global music scene.</p>
 </section>
 <section id="problem-statement" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Problem Statement</h1>
+<p>Despite Sailor Shift’s prominence and Oceanus Folk’s growing global footprint, there is limited structured analysis of how this influence has evolved over time and what implications it may have for future artists or genres. Additionally, while Sailor has consistently supported up-and-coming artists, little work has been done to quantify the impact of her collaborations or trace stylistic inspirations across genres and time.</p>
 </section>
 <section id="objectives" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Objectives</h1>
+<ul>
+<li><p>To analyze how Sailor Shift rose to global fame and popularized Oceanus Folk.</p></li>
+<li><p>To map out her influence on emerging artists and genre trends through knowledge graph analysis.</p></li>
+<li><p>To predict which artists might gain traction in the future based on historical influence patterns.</p></li>
+</ul>
 </section>
 <section id="what-has-been-done-before" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> What Has Been Done Before</h1>
@@ -434,9 +441,42 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="timeline" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Timeline</h1>
+<div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 1</td>
+<td>Data cleaning, JSON conversion, and preliminary exploration using bar and distribution plots; finalize problem framing and objective refinement.</td>
+</tr>
+<tr class="even">
+<td>Week 2</td>
+<td>Build and refine network visualizations using <code>ggraph</code>, <code>tidygraph</code>, and <code>visNetwork</code> to analyze Sailor Shift’s influence and genre connections.</td>
+</tr>
+<tr class="odd">
+<td>Week 3</td>
+<td>Develop animated influence graph over time; extract insights on top artists and genre evolution; begin drafting Quarto write-up and integrate visuals.</td>
+</tr>
+<tr class="even">
+<td>Week 4</td>
+<td>Finalize visualizations and narratives; complete and polish Quarto report; conduct peer review and incorporate feedback; work on project poster for final submission.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="deployment-plan" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Deployment Plan</h1>
+<p>The final output will be presented as a Quarto report hosted on GitHub, embedded with static plots, and network visualizations. An interactive Shiny dashboard will be deployed to allow users to explore influence trends dynamically. All datasets and scripts will be publicly available for reproducibility and review. Finally, a project poster will be created and developed to showcase our findings to peers.</p>
 
 
 </section>
@@ -524,8 +564,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -636,7 +674,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

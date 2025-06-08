@@ -1,9 +1,16 @@
 ---
-title: "About"
+title: "About This Page: A Note from Silas Reed"
 ---
 
-About this site
+**Oceanus Folk: Then-and-Now**
 
-```{r}
-1 + 1
-```
+Once a quiet fishing nation, Oceanus now finds itself at the heart of a global musical conversation, all because of one voice: **Sailor Shift**.
+
+When Sailor first emerged from the island’s indie scene, her music carried the unmistakable pulse of Oceanus Folk, raw, melodic, and unapologetically local. That pulse soon went global. Her viral breakout in 2028 didn’t just launch a career. It redefined a genre. From Ivy Echoes to international stardom, Sailor’s journey reflects the genre’s rise and reinvention.
+
+As a journalist born and raised in Oceanus, I’ve long wanted to trace this story not just of a singer, but of a sound. This dashboard is my attempt to do so. With data visualizations, influence maps, and trendlines, I explore the arc of Sailor’s career, her collaborators, and the evolving footprint of Oceanus Folk.
+
+You’ll also find a deeper question pulsing beneath the visuals: **What makes a rising star today?** This is more than music history. It’s about legacy, influence, and the future of sound.
+
+***Silas Reed***\
+**Oceanus Chronicle**

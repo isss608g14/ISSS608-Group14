@@ -6,7 +6,9 @@ website:
   navbar:
     left:
       - href: "proposal.qmd"
-        text: "Project proposal"    
+        text: "Project proposal"
+      - href: "minutes.qmd"
+        text: "Minutes of Meeting" 
             
         
     right: 

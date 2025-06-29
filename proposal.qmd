@@ -183,16 +183,12 @@ Define rising star traits and identify emerging Oceanus Folk artists.
 
 # Timeline
 
-<div>
-
 | Week | Milestone |
-|----------------|--------------------------------------------------------|
+|----|----|
 | Week 1 | Data cleaning, JSON conversion, and preliminary exploration using bar and distribution plots; finalize problem framing and objective refinement. |
 | Week 2 | Build and refine network visualizations using `ggraph`, `tidygraph`, and `visNetwork` to analyze Sailor Shift’s influence and genre connections. |
 | Week 3 | Develop animated influence graph over time; extract insights on top artists and genre evolution; begin drafting Quarto write-up and integrate visuals. |
 | Week 4 | Finalize visualizations and narratives; complete and polish Quarto report; conduct peer review and incorporate feedback; work on project poster for final submission. |
-
-</div>
 
 # Deployment Plan
 

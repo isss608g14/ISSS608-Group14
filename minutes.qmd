@@ -1,0 +1,157 @@
+---
+format: 
+  html:
+    theme: flatly
+    number-sections: true
+
+title: "Minutes of Meeting"
+execute: 
+  eval: true
+  echo: true
+  message: false
+  freeze: true
+---
+
+# Minutes of Meeting 1
+
+**Date:** June 7, 2025
+
+**Time:** 11:00 AM
+
+**Venue:** via Zoom
+
+**Attendees:** Sandra Jacob, Liu Hao, Tai Yu Ying
+
+**Approval of Agenda:** The agenda was reviewed and approved unanimously.
+
+**Business from Previous Meeting:** As this was the first formal group meeting, there were no prior minutes to approve.
+
+**New Business:**
+
+-   Group members shared their contributions to the group project proposal:
+
+    -   Sandra presented the project objective and overall plan.
+
+    -   Liu Hao provided the literature review, summarizing relevant past work.
+
+    -   Yu Ying discussed proposed approaches for the visualization project.
+
+-   The team collaboratively discussed ideas for visualization dashboards.
+
+-   Due to some confusion regarding the connection between Take-Home 3 and the group project, the team agreed to book a consultation with Prof. Kam.
+
+-   The group approved the structure of the project proposal.
+
+-   Members shared procedures for website rendering using GitHub and RStudio.
+
+**Action Items:**
+
+|  |  |  |
+|----------------------------------------|----------------|----------------|
+| **Task(s)** | **Owner(s)** | **Targeted Deadline** |
+| Upload individual assigned proposal sections into Github | All Members | 8 Jun 2025 |
+
+**Next Meeting:** The next meeting will be scheduled after consultation with Prof. Kam and details will be confirmed via group chat.
+
+**Minutes submitted by:** Liu Hao
+
+------------------------------------------------------------------------
+
+# Minutes of Meeting 2
+
+**Date:** June 7, 2025
+
+**Time:** 11:00 AM
+
+**Venue:** SCIS2 Basement
+
+**Attendees:** Sandra Jacob, Liu Hao, Tai Yu Ying
+
+**Approval of Agenda:** The agenda was reviewed and approved unanimously.
+
+**Business from Previous Meeting:** Progress updates on individual responsibilities were shared as follow-ups to the group proposal submission.
+
+**New Business:**
+
+-   **Dashboard Development:** The group confirmed the development of three interactive dashboards for the Shiny application.
+
+    -   Liu Hao is working on the **Exploratory Data Analysis** dashboard.
+
+    -   Sandra is working on the **Inferential Analysis** dashboard.
+
+    -   Yu Ying is responsible for the **Predictive Analysis** dashboard.
+
+-   **Poster Development:**
+
+    -   Sandra initiated the draft of the poster for the final project presentation.
+
+    -   Each member will incorporate insights, results, and visualizations from their respective dashboards into the poster once completed.
+
+**Action Items:**
+
+|  |  |  |
+|----------------------------------------|----------------|----------------|
+| **Task(s)** | **Owner(s)** | **Targeted Deadline** |
+| Work on individual assigned sections for next week discussion | All Members | 28 Jun 2025 |
+
+: **Next Meeting:** Scheduled for **June 29 (Saturday) at 4:30 PM** at SCIS2 Basement.
+
+**Minutes submitted by:** Sandra Jacob
+
+------------------------------------------------------------------------
+
+# Minutes of Meeting 3
+
+**Date:** June 28, 2025
+
+**Time:** 04:30 PM
+
+**Venue:** SCIS2 Basement
+
+**Attendees:** Sandra Jacob, Liu Hao, Tai Yu Ying
+
+**Approval of Agenda:** The agenda was reviewed and approved unanimously.
+
+**Business from Previous Meeting:** Team members provided updates on their assigned dashboard modules and discussed initial layout suggestions for the final project poster.
+
+**New Business:**
+
+-   **Poster Development:**
+
+    The group agreed to upload each member’s analysis visuals and content to Figma for collaborative poster compilation.
+
+    -   Sandra will be responsible for compiling the results and beautifying the poster layout.
+
+-   **Analysis Sharing:**
+
+    -   Liu Hao presented his Exploratory and Confirmatory analysis on Sailor Shift’s influence timeline and network structure. Key findings included cyclical influence spikes and Sailor’s role as a high-centrality node.
+
+    -   Yu Ying outlined the full pipeline for the end-to-end Predictive Model process for identifying rising stars. The workflow covered feature scoring, LASSO regression, and interpretation of output metrics.
+
+-   **Shiny App Development:**
+
+    -   The team aligned on application structure and responsibilities. Each member continues developing their assigned modules:
+
+        -   Liu Hao: *Exploratory Data Analysis*
+
+        -   Sandra: *Inferential Analysis*
+
+        -   Yu Ying: *Predictive Analysis*
+
+    -   Team members also agreed to upload key code segments to the shared repository to support integration.
+
+    -   Yu Ying will integrate individual dashboards (Exploratory, Inferential, Predictive) into a unified Shiny application.
+
+**Action Items:**
+
+|  |  |  |
+|-------------------------------------------|---------------|---------------|
+| **Task(s)** | **Owner(s)** | **Targeted Deadline** |
+| Upload individual assigned analysis to Figma | All Members | 29 Jun 2025 |
+| Upload individual assigned key code segments for integration into a unified Shiny application | All Members | 29 Jun 2025 |
+| Compile and beautify the poster layout | Sandra | 1 Jul 2025 |
+| Complete and integrate full Shiny app | Yu Ying | 5 Jul 2025 |
+
+**Next Meeting:** There will be no further formal meetings. The team will coordinate and communicate through the WhatsApp group as needed for updates and last-minute refinements.
+
+**Minutes submitted by:** Tai Yu Ying

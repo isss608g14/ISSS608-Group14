@@ -9,9 +9,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About This Page: A Note from Silas Reed",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Oceanus Folk: Then-and-Now\nOnce a quiet fishing nation, Oceanus now finds itself at the heart of a global musical conversation, all because of one voice: Sailor Shift.\nWhen Sailor first emerged from the island’s indie scene, her music carried the unmistakable pulse of Oceanus Folk, raw, melodic, and unapologetically local. That pulse soon went global. Her viral breakout in 2028 didn’t just launch a career. It redefined a genre. From Ivy Echoes to international stardom, Sailor’s journey reflects the genre’s rise and reinvention.\nAs a journalist born and raised in Oceanus, I’ve long wanted to trace this story not just of a singer, but of a sound. This dashboard is my attempt to do so. With data visualizations, influence maps, and trendlines, I explore the arc of Sailor’s career, her collaborators, and the evolving footprint of Oceanus Folk.\nYou’ll also find a deeper question pulsing beneath the visuals: What makes a rising star today? This is more than music history. It’s about legacy, influence, and the future of sound.\nSilas Reed\nOceanus Chronicle"
   },
   {
     "objectID": "Proj_proposal/Proj_proposal.html#data-preparation-and-wrangling",
@@ -60,7 +60,7 @@
     "href": "proposal.html",
     "title": "Project Proposal",
     "section": "",
-    "text": "1 Introduction\n\n\n2 Problem Statement\n\n\n3 Objectives\n\n\n4 What Has Been Done Before\n\n\n5 Proposed Approach\n\nData preparation and wranglingShiny Application Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\nLibrary\nPrimary Functions\nUse in This Project\n\n\n\n\njanitor\nData cleaning utilities, especially for column names\nUsed clean_names() to standardize column names for easier downstream manipulation\n\n\ntidyverse\nData wrangling (dplyr, tidyr), plotting (ggplot2), manipulation\nFiltering artists, cleaning datasets, joining tables, plotting timelines and charts\n\n\njsonlite\nReading and parsing JSON files\nLikely used to import the JSON-based knowledge graph dataset\n\n\nvisNetwork\nInteractive graph/network visualizations\nUsed for building interactive knowledge graphs of artists and genres\n\n\ntidygraph\nGraph manipulation in tidy format\nConstructing tidy node-edge relationship data for network analysis\n\n\n\n\n\n\n\n\n6 Prototype and Storyboards\n\n\n6.0.1 Genre Influence Dashboard – Overview\nThe Genre Influence Dashboard is an interactive visual analytics tool designed to help users explore the career trajectory of Sailor Shift and understand the broader impact of Oceanus Folk on the global music scene.\nKey Components:\n\nInfluence Over Time\nA timeline graph showing how Sailor Shift’s influence evolved from 2010 to 2040, illustrating her progression from local artist to global icon.\nCollaboration and Influence Network\nA network diagram mapping Sailor’s key collaborations—both as an individual artist and as part of Ivy Echoes—highlighting the flow of influence across genres like Indie Pop and Indie Folk.\nHeatmap: Influence of Oceanus Folk\nA genre-by-year heatmap showing how Oceanus Folk has permeated various genres such as Pop, Indie Pop, Country, and Blues over three decades. The saturation indicates intensity of influence.\nCareer Trajectory Chart\nA line chart comparing the popularity growth of Sailor Shift and two other artists, capturing notable rises in prominence and indicating patterns that may predict future stars.\n\n\n\n\n7 Timeline\n\n\n8 Deployment Plan"
+    "text": "Oceanus native Sailor Shift has risen to global fame, propelling the previously local genre of Oceanus Folk onto the international stage. As both a solo artist and collaborator, Sailor has maintained a unique ability to blend genres, mentor emerging talent, and sustain a distinct musical identity rooted in her origins. This project aims to explore the evolution of Sailor Shift’s influence, her role in the rise of Oceanus Folk, and how these shifts have shaped broader trends in the global music scene."
   },
   {
     "objectID": "proposal.html#genre-influence-dashboard-overview",
@@ -89,5 +89,89 @@
     "title": "Project Proposal",
     "section": "4.3 Node‐Embedding and Link‐Prediction Approaches.",
     "text": "4.3 Node‐Embedding and Link‐Prediction Approaches.\nNode2Vec (Grover & Leskovec, 2016) and GraphSAGE (Hamilton et al., 2017) have been applied to music‐industry graphs for tasks like predicting future collaborations (e.g., “Will artist A collaborate with artist B?”) or forecasting label signings. These embedding methods can capture structural equivalences—e.g., two indie‐folk artists who both consistently work on “collaborative splits.”"
+  },
+  {
+    "objectID": "proposal.html#dataset-summary",
+    "href": "proposal.html#dataset-summary",
+    "title": "Project Proposal",
+    "section": "6.1 🗂️ Dataset Summary",
+    "text": "6.1 🗂️ Dataset Summary\n\nTotal Nodes: 17,412\n(Types: Person, Song, Album, MusicalGroup, RecordLabel)\nTotal Edges: 37,857\n(Types: PerformerOf, InfluencedBy, MemberOf, ComposerOf, ProducerOf, LyricistOf, etc.)\nFormat: Directed Multigraph (via NetworkX node-link JSON)"
+  },
+  {
+    "objectID": "proposal.html#shiny-prototype",
+    "href": "proposal.html#shiny-prototype",
+    "title": "Project Proposal",
+    "section": "6.2 Shiny Prototype",
+    "text": "6.2 Shiny Prototype\n\n📁 Tab 1: Sailor Shift’s Career Explorer📁 Tab 2: Oceanus Folk Global Influence📁 Tab 3: Rising Stars Dashboard\n\n\n\nGoal\nTrace Sailor’s collaborations, direct/indirect influence links, and her influence on the Oceanus Folk community.\nInputs\n\nReference Node: Fixed to “Sailor Shift”\nNetwork Depth Selector: e.g., 1–3 hops from Sailor\nRelationship Filter: Choose from “Influenced By”, “Collaborated With”, “Influenced Others”\nYear Filter: Based on song/album notoriety year (e.g., 2023–2040)\n\nOutputs\n\nNetwork Graph: Interactive visNetwork centered on Sailor\nTemporal Timeline: Number of notable collaborations or influenced works per year\nCollaboration Table: Key artists, genres, or songs Sailor worked with\n\n\n\n\nGoal\nVisualize how Oceanus Folk has spread and evolved, and how other genres influenced it in return.\nInputs\n\nReference Genre: Fixed to “Oceanus Folk”\nNetwork Depth Selector: Show influence up to N hops\nInfluence Direction: Select “Oceanus Folk → Others” or “Others → Oceanus Folk”\nDate Filter: Restrict by release/notoriety date\n\nOutputs\n\nGenre Influence Network: Knowledge graph showing genre-to-genre influence paths\nTrend Line Graph: Temporal growth of Oceanus Folk influence (e.g., # of notable influenced songs per year)\nGenre Inspiration Chart: Oceanus Folk’s modern inspirations by genre\nTop Influenced Entities Table: List of most influenced genres, artists, and songs\n\n\n\n\nGoal\nDefine rising star traits and identify emerging Oceanus Folk artists.\nInputs\n\nArtist Multi-Select (max 3): e.g., Sailor Shift, Kimberly Snyder, Copper Canyon Ghosts\nDebut Year Filter: Filter artists by their entry year (e.g., 2025–2040)\nEmerging Artist Toggle: Show only those with fewer than N total works but rising trend\nInfluence Score Slider: Filter artists with high influence-to-output ratio\n\nOutputs\n\nFacet Line Chart: Notable songs over time by selected artists\nRadar Chart: Compare attributes (collaborations, genre spread, influence links)\nPrediction Box: 3 predicted Oceanus Folk stars with rationale\nCareer Trait Table: Metrics such as total notable songs, genres, number of collaborations"
+  },
+  {
+    "objectID": "minutes.html",
+    "href": "minutes.html",
+    "title": "Minutes of Meeting",
+    "section": "",
+    "text": "1 Minutes of Meeting 1\nDate: June 7, 2025\nTime: 11:00 AM\nVenue: via Zoom\nAttendees: Sandra Jacob, Liu Hao, Tai Yu Ying\nApproval of Agenda: The agenda was reviewed and approved unanimously.\nBusiness from Previous Meeting: As this was the first formal group meeting, there were no prior minutes to approve.\nNew Business:\n\nGroup members shared their contributions to the group project proposal:\n\nSandra presented the project objective and overall plan.\nLiu Hao provided the literature review, summarizing relevant past work.\nYu Ying discussed proposed approaches for the visualization project.\n\nThe team collaboratively discussed ideas for visualization dashboards.\nDue to some confusion regarding the connection between Take-Home 3 and the group project, the team agreed to book a consultation with Prof. Kam.\nThe group approved the structure of the project proposal.\nMembers shared procedures for website rendering using GitHub and RStudio.\n\nAction Items:\n\n\n\n\n\n\n\n\nTask(s)\nOwner(s)\nTargeted Deadline\n\n\nUpload individual assigned proposal sections into Github\nAll Members\n8 Jun 2025\n\n\n\nNext Meeting: The next meeting will be scheduled after consultation with Prof. Kam and details will be confirmed via group chat.\nMinutes submitted by: Liu Hao\n\n\n\n2 Minutes of Meeting 2\nDate: June 7, 2025\nTime: 11:00 AM\nVenue: SCIS2 Basement\nAttendees: Sandra Jacob, Liu Hao, Tai Yu Ying\nApproval of Agenda: The agenda was reviewed and approved unanimously.\nBusiness from Previous Meeting: Progress updates on individual responsibilities were shared as follow-ups to the group proposal submission.\nNew Business:\n\nDashboard Development: The group confirmed the development of three interactive dashboards for the Shiny application.\n\nLiu Hao is working on the Exploratory Data Analysis dashboard.\nSandra is working on the Inferential Analysis dashboard.\nYu Ying is responsible for the Predictive Analysis dashboard.\n\nPoster Development:\n\nSandra initiated the draft of the poster for the final project presentation.\nEach member will incorporate insights, results, and visualizations from their respective dashboards into the poster once completed.\n\n\nAction Items:\n\nNext Meeting: Scheduled for June 29 (Saturday) at 4:30 PM at SCIS2 Basement.\n\n\n\n\n\n\n\nTask(s)\nOwner(s)\nTargeted Deadline\n\n\nWork on individual assigned sections for next week discussion\nAll Members\n28 Jun 2025\n\n\n\nMinutes submitted by: Sandra Jacob\n\n\n\n3 Minutes of Meeting 3\nDate: June 28, 2025\nTime: 04:30 PM\nVenue: SCIS2 Basement\nAttendees: Sandra Jacob, Liu Hao, Tai Yu Ying\nApproval of Agenda: The agenda was reviewed and approved unanimously.\nBusiness from Previous Meeting: Team members provided updates on their assigned dashboard modules and discussed initial layout suggestions for the final project poster.\nNew Business:\n\nPoster Development:\nThe group agreed to upload each member’s analysis visuals and content to Figma for collaborative poster compilation.\n\nSandra will be responsible for compiling the results and beautifying the poster layout.\n\nAnalysis Sharing:\n\nLiu Hao presented his Exploratory and Confirmatory analysis on Sailor Shift’s influence timeline and network structure. Key findings included cyclical influence spikes and Sailor’s role as a high-centrality node.\nYu Ying outlined the full pipeline for the end-to-end Predictive Model process for identifying rising stars. The workflow covered feature scoring, LASSO regression, and interpretation of output metrics.\n\nShiny App Development:\n\nThe team aligned on application structure and responsibilities. Each member continues developing their assigned modules:\n\nLiu Hao: Exploratory Data Analysis\nSandra: Inferential Analysis\nYu Ying: Predictive Analysis\n\nTeam members also agreed to upload key code segments to the shared repository to support integration.\nYu Ying will integrate individual dashboards (Exploratory, Inferential, Predictive) into a unified Shiny application.\n\n\nAction Items:\n\n\n\n\n\n\n\n\nTask(s)\nOwner(s)\nTargeted Deadline\n\n\nUpload individual assigned analysis to Figma\nAll Members\n29 Jun 2025\n\n\nUpload individual assigned key code segments for integration into a unified Shiny application\nAll Members\n29 Jun 2025\n\n\nCompile and beautify the poster layout\nSandra\n1 Jul 2025\n\n\nComplete and integrate full Shiny app\nYu Ying\n5 Jul 2025\n\n\n\nNext Meeting: There will be no further formal meetings. The team will coordinate and communicate through the WhatsApp group as needed for updates and last-minute refinements.\nMinutes submitted by: Tai Yu Ying"
+  },
+  {
+    "objectID": "methodology.html",
+    "href": "methodology.html",
+    "title": "📊 Methodology",
+    "section": "",
+    "text": "To understand Sailor Shift’s influence and identify rising stars in Oceanus Folk, we followed a structured, multi-stage methodology:\n\n\n\nSource: MC1_graph.json (knowledge graph).\nParsing: Extracted and cleaned nodes and edges, resolving duplicates, missing values, and converting release_date to year format.\nTransformation:\n\nFiltered for influence-related relationships (e.g., InspiredBy, InterpolatesFrom).\nGenerated node features like centrality, genre, affiliation, and timestamps.\n\n\n\n\n\n\nBuilt a directed influence network with:\n\nNodes: Artists, Songs, Albums, Labels.\nEdges: Relationships representing stylistic or collaborative influence.\n\nDerived ego-networks for each artist and genre to explore local impact.\n\n\n\n\n\nTemporal Trends:\nAnalyzed number of influence edges per year, highlighting peak years and cyclical trends.\nNetwork Structure:\n\nIdentified high-degree nodes and subgraphs using centrality measures.\nMapped artist influence paths and collaboration clusters.\n\nGenre Focus:\n\nFiltered and visualized Oceanus Folk songs and relationships.\nAssessed frequency and strength of influence within and across genres.\n\n\nEDA helped identify Sailor Shift’s peak influence years and the structure of her immediate artistic neighborhood, guiding feature design for prediction modeling.\n\n\n\n\nCreated six predictive features for rising star analysis:\n\nscore_performer: ≥3 notable songs in 2030–2035.\nscore_cluster: ≥2 notable songs released within a 2–3 year period.\nscore_multirole: Artist played multiple creative roles.\nscore_crossover: Connections to other genres.\nscore_label: Signed or distributed by a label.\nscore_sampled: Songs sampled, covered, or referenced by others.\n\n\n\n\n\nEach artist was scored based on presence of the six traits. The final total_score is computed as the sum of all active traits.\ntotal_score = score_performer + score_cluster + score_multirole + \n              score_crossover + score_label + score_sampled\n\n\n\n\nApplied LASSO to shrink non-contributory traits and identify those with highest predictive power.\nRefitted a linear model with only selected features for simplicity and interpretability."
+  },
+  {
+    "objectID": "methodology.html#project-workflow",
+    "href": "methodology.html#project-workflow",
+    "title": "📊 Methodology",
+    "section": "",
+    "text": "To understand Sailor Shift’s influence and identify rising stars in Oceanus Folk, we followed a structured, multi-stage methodology:\n\n\n\nSource: MC1_graph.json (knowledge graph).\nParsing: Extracted and cleaned nodes and edges, resolving duplicates, missing values, and converting release_date to year format.\nTransformation:\n\nFiltered for influence-related relationships (e.g., InspiredBy, InterpolatesFrom).\nGenerated node features like centrality, genre, affiliation, and timestamps.\n\n\n\n\n\n\nBuilt a directed influence network with:\n\nNodes: Artists, Songs, Albums, Labels.\nEdges: Relationships representing stylistic or collaborative influence.\n\nDerived ego-networks for each artist and genre to explore local impact.\n\n\n\n\n\nTemporal Trends:\nAnalyzed number of influence edges per year, highlighting peak years and cyclical trends.\nNetwork Structure:\n\nIdentified high-degree nodes and subgraphs using centrality measures.\nMapped artist influence paths and collaboration clusters.\n\nGenre Focus:\n\nFiltered and visualized Oceanus Folk songs and relationships.\nAssessed frequency and strength of influence within and across genres.\n\n\nEDA helped identify Sailor Shift’s peak influence years and the structure of her immediate artistic neighborhood, guiding feature design for prediction modeling.\n\n\n\n\nCreated six predictive features for rising star analysis:\n\nscore_performer: ≥3 notable songs in 2030–2035.\nscore_cluster: ≥2 notable songs released within a 2–3 year period.\nscore_multirole: Artist played multiple creative roles.\nscore_crossover: Connections to other genres.\nscore_label: Signed or distributed by a label.\nscore_sampled: Songs sampled, covered, or referenced by others.\n\n\n\n\n\nEach artist was scored based on presence of the six traits. The final total_score is computed as the sum of all active traits.\ntotal_score = score_performer + score_cluster + score_multirole + \n              score_crossover + score_label + score_sampled\n\n\n\n\nApplied LASSO to shrink non-contributory traits and identify those with highest predictive power.\nRefitted a linear model with only selected features for simplicity and interpretability."
+  },
+  {
+    "objectID": "methodology.html#tooling",
+    "href": "methodology.html#tooling",
+    "title": "📊 Methodology",
+    "section": "2 Tooling",
+    "text": "2 Tooling\n\nShiny + Golem: Modular architecture for dashboards.\nigraph, glmnet, dplyr: For network analysis and modeling.\nQuarto: For site presentation and documentation."
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "📈 Findings and Analysis",
+    "section": "",
+    "text": "Peak influence year: 2028, with 9 connections.\nOther spikes observed in 2031, 2034, 2036, and 2038.\nSuggests cycles of renewed cultural relevance or stylistic resurgence.\n\n\n\n\n\n\nFitted trendline: +0.55 songs/year.\nHowever, regression not statistically significant (p = 0.329).\nR² value (~7.9%) indicates only a small share of variance is explained by time alone."
+  },
+  {
+    "objectID": "analysis.html#exploratory-data-analysis",
+    "href": "analysis.html#exploratory-data-analysis",
+    "title": "📈 Findings and Analysis",
+    "section": "",
+    "text": "Peak influence year: 2028, with 9 connections.\nOther spikes observed in 2031, 2034, 2036, and 2038.\nSuggests cycles of renewed cultural relevance or stylistic resurgence.\n\n\n\n\n\n\nFitted trendline: +0.55 songs/year.\nHowever, regression not statistically significant (p = 0.329).\nR² value (~7.9%) indicates only a small share of variance is explained by time alone."
+  },
+  {
+    "objectID": "analysis.html#network-analysis",
+    "href": "analysis.html#network-analysis",
+    "title": "📈 Findings and Analysis",
+    "section": "2 Network Analysis",
+    "text": "2 Network Analysis\n\nNetwork Centrality:\nSailor Shift is a high-degree central node, both influencing and being influenced.\nSubgraph Neighbors:\nKey collaborators include:\n\nBeatrice Albright\nRainfall Fiction\nThe Saltwater Weavers\n\n\nThese connections reinforce Sailor Shift’s role as a stylistic bridge within the genre."
+  },
+  {
+    "objectID": "analysis.html#predictive-modeling-rising-stars",
+    "href": "analysis.html#predictive-modeling-rising-stars",
+    "title": "📈 Findings and Analysis",
+    "section": "3 Predictive Modeling: Rising Stars",
+    "text": "3 Predictive Modeling: Rising Stars\n\nStep 1: Feature Design\nDefined 6 forward-looking traits (e.g. performer role with recent notable songs, tightly clustered notable releases, multirole, artist’s recent songs have influence edges to other genres, having a label, recently sampled or referenced by others).\n\nStep 2: Scoring Artists\nApplied scoring logic to assign score values per artist.\nStep 3: Total Score Creation\nSummed the 6 features to create a total_score as the target outcome.\nStep 4: LASSO Modeling\nUsed LASSO regression to select the most predictive features.\nStep 5: Refit Final Model\nTrained a simple linear model using only the selected features.\nStep 6: Predict & Rank\nGenerated predictions and identified top potential rising stars.\n\n\n3.1 🧠 Feature Impact (Post-LASSO)\nTop predictive traits: - score_performer - score_sampled - score_multirole\n\n\n3.2 🔢 Top Predicted Rising Stars\n\n\n\nArtist\nTotal Score\nKey Traits\n\n\n\n\nBeatrice Albright\n4\nPerformer, Cluster, Multirole\n\n\nDaniel O’Connell\n3\nPerformer, Cluster, Multirole\n\n\nCopper Canyon Ghosts\n3\nPerformer, Cluster\n\n\n\nTraits like versatility and being sampled by others stand out as signals of rising potential."
+  },
+  {
+    "objectID": "analysis.html#conclusion",
+    "href": "analysis.html#conclusion",
+    "title": "📈 Findings and Analysis",
+    "section": "4 Conclusion",
+    "text": "4 Conclusion\nThe combination of influence trends, graph centrality, and predictive scoring reveals the evolving dynamics of Oceanus Folk. Sailor Shift’s role in the genre is both foundational and forward-looking, mentoring a new generation of breakout artists."
+  },
+  {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "Team",
+    "section": "",
+    "text": "1 The Team\nCreated for ISSS608 (Visual Analytics and Applications), April Term AY2024–25 at SMU, under the mentorship of Dr. Kam Tin Seong.\nContributors:\n\nTai Yu Ying\nLiu Hao\nSandra Jacob"
   }
 ]

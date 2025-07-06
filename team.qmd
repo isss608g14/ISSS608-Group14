@@ -1,0 +1,25 @@
+---
+format: 
+  html:
+    theme: flatly
+    number-sections: true
+
+title: "Team"
+execute: 
+  eval: true
+  echo: true
+  message: false
+  freeze: true
+---
+
+# **The Team**
+
+Created for ISSS608 (Visual Analytics and Applications), April Term AY2024–25 at SMU, under the mentorship of Dr. Kam Tin Seong.
+
+**Contributors:**
+
+-   Tai Yu Ying
+
+-   Liu Hao
+
+-   Sandra Jacob

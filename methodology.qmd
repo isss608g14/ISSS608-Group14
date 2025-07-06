@@ -1,0 +1,81 @@
+---
+format: 
+  html:
+    theme: flatly
+    number-sections: true
+
+title: "📊 Methodology"
+execute: 
+  eval: true
+  echo: true
+  message: false
+  freeze: true
+---
+
+## Project Workflow
+
+To understand Sailor Shift's influence and identify rising stars in Oceanus Folk, we followed a structured, multi-stage methodology:
+
+### 1. Data Preparation
+
+-   **Source**: MC1_graph.json (knowledge graph).
+-   **Parsing**: Extracted and cleaned nodes and edges, resolving duplicates, missing values, and converting `release_date` to year format.
+-   **Transformation**:
+    -   Filtered for influence-related relationships (e.g., InspiredBy, InterpolatesFrom).
+    -   Generated node features like centrality, genre, affiliation, and timestamps.
+
+### 2. Graph Construction
+
+-   Built a directed influence network with:
+    -   Nodes: Artists, Songs, Albums, Labels.
+    -   Edges: Relationships representing stylistic or collaborative influence.
+-   Derived ego-networks for each artist and genre to explore local impact.
+
+### 3. Exploratory Data Analysis (EDA)
+
+-   **Temporal Trends**:\
+    Analyzed number of influence edges per year, highlighting peak years and cyclical trends.
+
+-   **Network Structure**:
+
+    -   Identified high-degree nodes and subgraphs using centrality measures.
+    -   Mapped artist influence paths and collaboration clusters.
+
+-   **Genre Focus**:
+
+    -   Filtered and visualized Oceanus Folk songs and relationships.
+    -   Assessed frequency and strength of influence within and across genres.
+
+EDA helped identify Sailor Shift's peak influence years and the structure of her immediate artistic neighborhood, guiding feature design for prediction modeling.
+
+### 4. Feature Engineering
+
+-   Created six predictive features for rising star analysis:
+    1.  `score_performer`: ≥3 notable songs in 2030–2035.
+    2.  `score_cluster`: ≥2 notable songs released within a 2–3 year period.
+    3.  `score_multirole`: Artist played multiple creative roles.
+    4.  `score_crossover`: Connections to other genres.
+    5.  `score_label`: Signed or distributed by a label.
+    6.  `score_sampled`: Songs sampled, covered, or referenced by others.
+
+### 5. Scoring Logic
+
+Each artist was scored based on presence of the six traits. The final `total_score` is computed as the sum of all active traits.
+
+``` r
+total_score = score_performer + score_cluster + score_multirole + 
+              score_crossover + score_label + score_sampled
+```
+
+### 6. LASSO Regression
+
+-   Applied LASSO to shrink non-contributory traits and identify those with highest predictive power.
+-   Refitted a linear model with only selected features for simplicity and interpretability.
+
+------------------------------------------------------------------------
+
+## Tooling
+
+-   **Shiny + Golem**: Modular architecture for dashboards.
+-   **igraph**, **glmnet**, **dplyr**: For network analysis and modeling.
+-   **Quarto**: For site presentation and documentation.

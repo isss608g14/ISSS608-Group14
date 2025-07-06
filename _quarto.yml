@@ -9,13 +9,30 @@ website:
         text: "Project proposal"
       - href: "minutes.qmd"
         text: "Minutes of Meeting" 
-            
+      - href: "methodology.qmd"
+        text: "Methodology"  
+      - href: "analysis.qmd"
+        text: "Analysis"
+      - href: "🎵 The Sound that Sailed - Poster.pdf"
+        text: "Poster"        
         
     right: 
-      - href: index.qmd
-        text: Home
+      - text: "Shinyapp"
+        menu: 
+          - text: "User guide"
+            href: "🎵 The Sound that Sailed - User Guide.pdf"
+          - text: "Shinyapp"
+            href: "https://thesoundthatsailed.shinyapps.io/isss608-group14-sa/"
+      - text: "Github"
+        menu: 
+          - text: "Project site"
+            href: "https://github.com/isss608g14/ISSS608-Group14"
+          - text: "Shinyapp"
+            href: "https://github.com/isss608g14/ISSS608-Group14-SA"
       - href: about.qmd
         text: About
+      - href: team.qmd
+        text: The Team
 
 format:
   html:
